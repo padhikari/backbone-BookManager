@@ -1,5 +1,5 @@
 {
-	"name" : "backbone-Book Manager",
+	"name" : "backbone-library",
 	"version" : "0.0.1",
 	"description" : {
 		"express": "~3.1.0",
