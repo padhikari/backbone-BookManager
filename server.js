@@ -96,6 +96,26 @@ app.post( '/api/books', function( request, response ) {
 	});
 });
 
+//Update a book
+app.put( '/api/books/:id', function( request, response ) {
+	console.log( 'Updating book ' + request.body.title );
+	return BookModel.findById( request.params.id, function( err, book ) {
+		book.title = request.body.title;
+		book.author = request.body.author;
+		book.releaseDate = request.body.releaseDate;
+		book.keywords = request.body.keywords;
+
+		return book.save( function( err ) {
+			if( !err ) {
+				console.log( 'book updated' );
+			} else {
+				console.log( err );
+			}
+		return response.send( book );
+		});
+	});
+});
+
 
 
 
