@@ -1,7 +1,8 @@
 {
-	"name" : "backbone-library",
+	"name" : "backbone-BookManager",
 	"version" : "0.0.1",
-	"description" : {
+	"description" : "A simple library appication using Backbone",
+	"dependencies" : {
 		"express": "~3.1.0",
 		"path": "~0.4.9",
 		"mongoose" : "~3.5.5"
