@@ -27,6 +27,10 @@ app.configure(function(){
 	//show all errors in development
 	app.use(express.errorHandler({dumpExceptions:true, showStack:true}));
 
+});
 
-
+//start server
+var port = 4711;
+app.listen(port, function(){
+	console.log("Express server listening on port %d in %s mode", port, app.settings.env);
 });
